@@ -39,8 +39,8 @@ def main():
             print(f"URL: {url}")
             print(f"Old hash: {old_hash}")
             print(f"New hash: {content_hash}")
-
-　　　　　　　message = f"📢 ページが更新されました: {url}"
+            
+            message = f"📢 ページが更新されました: {url}"
             requests.post(WEBHOOK_URL, json={"text": message})
 
             with open(hash_file, "w") as f:
