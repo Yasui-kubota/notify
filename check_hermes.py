@@ -36,9 +36,9 @@ def main():
                 old_hash = f.read()
 
         if old_hash != content_hash:
-        　　 print(f"URL: {url}")
-    　　　　 print(f"Old hash: {old_hash}")
-    　　　　 print(f"New hash: {content_hash}")
+            print(f"URL: {url}")
+            print(f"Old hash: {old_hash}")
+            print(f"New hash: {content_hash}")
 
 　　　　　　　message = f"📢 ページが更新されました: {url}"
             requests.post(WEBHOOK_URL, json={"text": message})
